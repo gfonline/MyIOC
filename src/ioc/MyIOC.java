@@ -42,6 +42,7 @@ public class MyIOC {
      */
     public MyIOC (String location) throws Exception{
         this.loadBeans(location);
+        doLoadBeanDefinitions();
     }
 
     /***
@@ -239,7 +240,6 @@ public class MyIOC {
      * @return bean
      */
     public Object getBean (String id) throws Exception{
-        doLoadBeanDefinitions();
         return singletonObjects.get(id);
     }
 }
