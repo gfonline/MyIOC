@@ -1,3 +1,5 @@
+package ioc;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -15,22 +17,22 @@ import java.util.List;
 public class MyIOC {
 
     //存储所有bean的名字
-    private List<String> beanNames;
+    private List<String> beanNames = new ArrayList<>();
 
     //存储所有bean的beanDefinition信息
-    private HashMap<String, BeanDefinition> beanClassMap;
+    private HashMap<String, BeanDefinition> beanClassMap = new HashMap<>();
 
     //存储已经初始化好的bean，从缓存中取出可以直接用
-    private HashMap<String, Object> singletonObjects;
+    private HashMap<String, Object> singletonObjects = new HashMap<>();
 
     //存储原始bean对象，尚未填充属性，用于解决依赖循环
-    private HashMap<String, Object> earlySingletonObjects;
+    private HashMap<String, Object> earlySingletonObjects = new HashMap<>() ;
 
     //存储bean的工厂对象，用于解决依赖循环
-    private HashMap<String, Object> singletonFactories;
+    private HashMap<String, Object> singletonFactories = new HashMap<>();
 
     //存储当前正在创建的bean的名称
-    private List<String> singletonsCurrentlyInCreation;
+    private List<String> singletonsCurrentlyInCreation = new ArrayList<>();
 
     /***
      *

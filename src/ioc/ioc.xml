@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans>
+    <bean id="user" class="ioc.pojo.User">
+        <property name="id" value="u_1001"/>
+        <property name="name" value="吴蓓蓓"/>
+        <property name="age" value="15"/>
+        <property name="role" ref="role"/>
+    </bean>
+    <bean id="role" class="ioc.pojo.Role">
+        <property name="id" value="r_2001"/>
+        <property name="name" value="管理员"/>
+        <property name="user" ref="user"/>
+    </bean>
+
+</beans>
