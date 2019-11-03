@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Test {
     public static void main(String[] args){
-        String path = "/Users/gfonline/Desktop/project/MyIOC/src/ioc/ioc.xml";
+        String path = "./MyIOC/src/ioc/ioc.xml";
         try {
             MyIOC test = new MyIOC(path);
             // 测试xml读取是否成功
